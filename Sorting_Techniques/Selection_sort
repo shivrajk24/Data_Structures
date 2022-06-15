@@ -1,0 +1,67 @@
+#include <stdio.h>
+
+int main()
+
+{
+
+int size,a[100],i,j,swap=0,min,loc;
+
+printf("\n\nEnter size of array::");
+
+scanf("%d",&size);
+
+printf("\n\nEnter %d array elements::",size);
+
+for(i=0;i<size;i++)
+
+{
+
+scanf("%d", &a[i]);
+
+}
+
+printf("\n\nElements after sorting::");
+
+for(i=0;i<size;i++)
+
+{ min=a[i];
+
+loc=i;
+
+for(j=i+1;j<size;j++)
+
+{
+
+if(a[j]<min)
+
+{
+
+min=a[j];
+
+loc=j;
+
+}
+
+} 
+
+if(loc!=i)
+
+{
+
+swap=a[i];
+
+a[i]=a[loc];
+
+a[loc]=swap;
+
+}
+
+}
+
+for (i = 0; i < size; i ++)
+
+printf("\t%d", a[i]);
+
+return 0;
+
+}
